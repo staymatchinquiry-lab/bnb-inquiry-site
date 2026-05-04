@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Bookings - Deluxe Marcapolo Stays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 40vh;
+      background: url('bookings-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Booking Form */
+    .booking-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+    .booking-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .booking-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .booking-container input, .booking-container select, .booking-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .booking-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Confirmation Message */
+    #confirmation {
+      display: none;
+      margin-top: 20px;
+      background-color: #000000;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>STAYMATCH BOOKINGS</h1>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="booking-container">
+    <h2>MAKE YOUR BOOKING</h2>
+    <form id="bookingForm">
+      <label for="name">FULL NAME</label>
+      <input type="text" id="name" required>
+
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" required>
+
+      <!-- Property Type -->
+      <label for="propertyType">PROPERTY TYPE</label>
+      <select id="propertyType" required>
+        <option value="">-- SELECT PROPERTY TYPE --</option>
+        <option value="Studio Apartment">STUDIO APARTMENT</option>
+        <option value="1 Bedroom Apartment">1 BEDROOM APARTMENT</option>
+        <option value="2 Bedroom Apartment">2 BEDROOM APARTMENT</option>
+        <option value="3 Bedroom Apartment">3 BEDROOM APARTMENT</option>
+        <option value="4 Bedroom Apartment">4 BEDROOM APARTMENT</option>
+        <option value="Villa">VILLA</option>
+        <option value="Cottage">COTTAGE</option>
+      </select>
+
+      <!-- Destination -->
+      <label for="destination">DESTINATION</label>
+      <select id="destination" required>
+        <option value="">-- SELECT DESTINATION --</option>
+        <option>BONDENI</option>
+        <option>CBD / CITY CENTRE</option>
+        <option>CHANGAMWE</option>
+        <option>DIANI / UKUNDA</option>
+        <option>DONHOLM</option>
+        <option>EMBAKASI</option>
+        <option>FEDHA</option>
+        <option>GARDEN CITY</option>
+        <option>JKIA AREA</option>
+        <option>KALUNDU</option>
+        <option>KAMAKIS</option>
+        <option>KAREN</option>
+        <option>KIAMBU ROAD</option>
+        <option>KILELESHWA</option>
+        <option>KILIFI</option>
+        <option>KILIMANI</option>
+        <option>KISUMU CBD</option>
+        <option>KITENGELA</option>
+        <option>KITISURU</option>
+        <option>KITUI TOWN CBD</option>
+        <option>KIZINGO</option>
+        <option>KU HOSPITAL</option>
+        <option>KWA VONZA</option>
+        <option>LANET</option>
+        <option>LANGATA</option>
+        <option>LAVINGTON</option>
+        <option>LIKONI</option>
+        <option>MAKASEMBO</option>
+        <option>MALINDI</option>
+        <option>MEMBLEY</option>
+        <option>MILIMANI KISUMU</option>
+        <option>MILIMANI NAKURU</option>
+        <option>MIREMA</option>
+        <option>MOMBASA CBD / TOWN</option>
+        <option>MTWAPA</option>
+        <option>NAKA ESTATE</option>
+        <option>NGARA</option>
+        <option>NYALI</option>
+        <option>OLD TOWN</option>
+        <option>PARKLANDS</option>
+        <option>ROYSAMBU</option>
+        <option>RUAKA</option>
+        <option>SECTION 58</option>
+        <option>SHANZU</option>
+        <option>SOUTH B / SOUTH C</option>
+        <option>SYOKIMAU</option>
+        <option>TATU CITY</option>
+        <option>THIKA ROAD</option>
+        <option>TOM MBOYA ESTATE KISUMU</option>
+        <option>TRM</option>
+        <option>TUDOR</option>
+        <option>WATAMU</option>
+        <option>WESTLANDS</option>
+        <option>ZIMMERMAN</option>
+      </select>
+
+      <!-- Place Description -->
+      <label for="placeDescription">PLACE DESCRIPTION</label>
+      <textarea id="placeDescription" rows="3" placeholder="Describe the exact location or landmark (e.g., near Nyali Mall, close to JKIA)..."></textarea>
+
+      <!-- Dates -->
+      <label for="checkin">CHECK-IN DATE</label>
+      <input type="date" id="checkin" required>
+
+      <label for="checkout">CHECK-OUT DATE</label>
+      <input type="date" id="checkout" required>
+
+      <!-- Special Requests -->
+      <label for="message">SPECIAL REQUESTS</label>
+      <textarea id="message" rows="4" placeholder="ANY SPECIAL REQUESTS..."></textarea>
+
+      <button type="button" onclick="confirmBooking()">SUBMIT BOOKING</button>
+    </form>
+
+    <div id="confirmation">
+      THANK YOU FOR YOUR BOOKING! OUR TEAM WILL CONTACT YOU SHORTLY TO CONFIRM YOUR STAY.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function confirmBooking() {
+      document.getElementById('confirmation').style.display = 'block';
+      document.getElementById('bookingForm').reset();
+    }
+  </script>
+
+</body>
+</html>

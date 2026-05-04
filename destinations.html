@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Destinations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('destinations-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Destination Form */
+    .destination-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .destination-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .destination-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .destination-container select, .destination-container input, .destination-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .destination-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Confirmation Box */
+    .confirmation {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #000000;
+      border-radius: 5px;
+      display: none;
+    }
+    .confirmation h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>DESTINATIONS</h1>
+  </div>
+
+  <!-- Destination Inquiry Form -->
+  <div class="destination-container">
+    <h2>CHOOSE YOUR DESTINATION</h2>
+    <form id="destinationForm">
+      <label for="destination">DESTINATION</label>
+      <select id="destination" required>
+        <option value="">Select destination</option>
+        <option>Bondeni</option>
+        <option>CBD / City Centre</option>
+        <option>Changamwe</option>
+        <option>Diani / Ukunda</option>
+        <option>Donholm</option>
+        <option>Embakasi</option>
+        <option>Fedha</option>
+        <option>Garden City</option>
+        <option>JKIA Area</option>
+        <option>Kalundu</option>
+        <option>Kamakis</option>
+        <option>Karen</option>
+        <option>Kiambu Road</option>
+        <option>Kileleshwa</option>
+        <option>Kilifi</option>
+        <option>Kilimani</option>
+        <option>Kisumu CBD</option>
+        <option>Kitengela</option>
+        <option>Kitisuru</option>
+        <option>Kitui Town CBD</option>
+        <option>Kizingo</option>
+        <option>KU Hospital</option>
+        <option>Kwa Vonza</option>
+        <option>Lanet</option>
+        <option>Langata</option>
+        <option>Lavington</option>
+        <option>Likoni</option>
+        <option>Makasembo</option>
+        <option>Malindi</option>
+        <option>Membley</option>
+        <option>Milimani Kisumu</option>
+        <option>Milimani Nakuru</option>
+        <option>Mirema</option>
+        <option>Mombasa CBD / Town</option>
+        <option>Mtwapa</option>
+        <option>Naka Estate</option>
+        <option>Ngara</option>
+        <option>Nyali</option>
+        <option>Old Town</option>
+        <option>Parklands</option>
+        <option>Roysambu</option>
+        <option>Ruaka</option>
+        <option>Section 58</option>
+        <option>Shanzu</option>
+        <option>South B / South C</option>
+        <option>Syokimau</option>
+        <option>Tatu City</option>
+        <option>Thika Road</option>
+        <option>Tom Mboya Estate Kisumu</option>
+        <option>TRM</option>
+        <option>Tudor</option>
+        <option>Watamu</option>
+        <option>Westlands</option>
+        <option>Zimmerman</option>
+      </select>
+
+      <label for="placeDescription">PLACE DESCRIPTION</label>
+      <textarea id="placeDescription" rows="3" placeholder="Describe exact location or landmark (e.g. near Nyali Mall, Airport Road, Seaview)"></textarea>
+
+      <label for="propertyType">PROPERTY TYPE</label>
+      <select id="propertyType" required>
+        <option value="">Select property type</option>
+        <option>Studio Apartment</option>
+        <option>1 Bedroom Apartment</option>
+        <option>2 Bedroom Apartment</option>
+        <option>3 Bedroom Apartment</option>
+        <option>4 Bedroom Apartment</option>
+        <option>Villa</option>
+        <option>Cottage</option>
+      </select>
+
+      <label for="checkin">CHECK-IN DATE</label>
+      <input type="date" id="checkin" required>
+
+      <label for="checkout">CHECK-OUT DATE</label>
+      <input type="date" id="checkout" required>
+
+      <label for="guests">NUMBER OF GUESTS</label>
+      <input type="number" id="guests" placeholder="e.g. 2" required>
+
+      <label for="budget">BUDGET</label>
+      <input type="text" id="budget" placeholder="e.g. KES 10,000">
+
+      <button type="button" onclick="submitDestination()">SUBMIT DESTINATION INQUIRY</button>
+    </form>
+
+    <!-- Confirmation -->
+    <div id="confirmationBox" class="confirmation">
+      <h3>Destination Inquiry Submitted ✅</h3>
+      <p>Our team will match you with the best BnB options in your chosen area.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function submitDestination() {
+      document.getElementById('confirmationBox').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

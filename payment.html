@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Payment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* M-Pesa Banner Section */
+    .mpesa-banner {
+      text-align: center;
+      padding: 20px;
+      background-color: #000000;
+    }
+    .mpesa-banner img {
+      max-width: 300px;
+      border-radius: 8px;
+    }
+
+    /* Payment Section */
+    .payment-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .payment-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .payment-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .payment-container input, .payment-container select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .payment-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Confirmation Box */
+    .confirmation {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #000000;
+      border-radius: 5px;
+      display: none;
+    }
+    .confirmation h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- M-Pesa Banner -->
+  <div class="mpesa-banner">
+    <img src="mpesa-banner.jpg" alt="M-Pesa Payment Banner">
+  </div>
+
+  <!-- Payment Form -->
+  <div class="payment-container">
+    <h2>PAYMENT VERIFICATION</h2>
+    <form id="paymentForm">
+      <label for="transactionCode">TRANSACTION CODE</label>
+      <input type="text" id="transactionCode" placeholder="Enter your M-Pesa code" required>
+
+      <label for="senderName">SENDER NAME</label>
+      <input type="text" id="senderName" placeholder="Enter the name that sent money" required>
+
+      <label for="amount">AMOUNT SENT</label>
+      <input type="number" id="amount" placeholder="Enter amount sent" required>
+
+      <label for="paymentType">PAYMENT TYPE</label>
+      <select id="paymentType" required>
+        <option value="">Select type</option>
+        <option value="deposit">Reservation Deposit</option>
+        <option value="full">Full Reservation Payment</option>
+      </select>
+
+      <label for="amountType">AMOUNT CATEGORY</label>
+      <input type="text" id="amountType" placeholder="e.g. KES 5,000 deposit" required>
+
+      <button type="button" onclick="verifyPayment()">VERIFY PAYMENT</button>
+    </form>
+
+    <!-- Confirmation -->
+    <div id="confirmationBox" class="confirmation">
+      <h3>Payment Verified ✅</h3>
+      <p>Your booking has been confirmed. A receipt will be sent to your WhatsApp/email shortly.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function verifyPayment() {
+      const code = document.getElementById('transactionCode').value;
+      const name = document.getElementById('senderName').value;
+      const amount = document.getElementById('amount').value;
+      const type = document.getElementById('paymentType').value;
+      const category = document.getElementById('amountType').value;
+
+      if(code && name && amount && type && category) {
+        document.getElementById('confirmationBox').style.display = 'block';
+      } else {
+        alert('Please fill in all fields correctly.');
+      }
+    }
+  </script>
+
+</body>
+</html>

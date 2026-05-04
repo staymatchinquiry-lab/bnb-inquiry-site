@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Feedback - Deluxe Marcapolo Stays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('feedback-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Feedback Form */
+    .feedback-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .feedback-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .feedback-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .feedback-container input, .feedback-container select, .feedback-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* Rating Slider */
+    .rating-slider {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .rating-slider input[type="range"] {
+      width: 100%;
+      accent-color: #D4AF37;
+    }
+    .rating-slider span {
+      display: inline-block;
+      width: 20%;
+      text-align: center;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    .feedback-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>FEEDBACK & RATING</h1>
+  </div>
+
+  <!-- Feedback Form -->
+  <div class="feedback-container">
+    <h2>WE VALUE YOUR OPINION</h2>
+    <form id="feedbackForm">
+      <label for="name">FULL NAME</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <label for="type">FEEDBACK TYPE</label>
+      <select id="type" required>
+        <option value="">-- SELECT TYPE --</option>
+        <option value="complaint">Complaint</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="compliment">Compliment</option>
+      </select>
+
+      <label for="message">YOUR MESSAGE</label>
+      <textarea id="message" rows="4" placeholder="Describe your experience..." required></textarea>
+
+      <!-- Rating Slider -->
+      <div class="rating-slider">
+        <label for="rating">RATE OUR SERVICE</label>
+        <input type="range" id="rating" min="1" max="5" value="5" step="1">
+        <div>
+          <span>1★</span><span>2★</span><span>3★</span><span>4★</span><span>5★</span>
+        </div>
+      </div>
+
+      <button type="button" onclick="submitFeedback()">SUBMIT FEEDBACK</button>
+    </form>
+
+    <div id="feedbackConfirmation" style="display:none; text-align:center; color:#D4AF37; margin-top:15px;">
+      Thank you for your feedback! We appreciate your time and rating.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function submitFeedback() {
+      document.getElementById('feedbackConfirmation').style.display = 'block';
+      document.getElementById('feedbackForm').reset();
+    }
+  </script>
+
+</body>
+</html>
+<!-- Navigation Bar -->
+<nav style="background-color:#000000; padding:15px; text-align:center;">
+  <a href="login.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Login</a>
+  <a href="signup.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Sign Up</a>
+  <a href="verification.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Verification</a>
+  <a href="confirmation.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Confirmation</a>
+  <a href="dashboard.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Dashboard</a>
+  <a href="testimonials.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Testimonials</a>
+  <a href="feedback.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Feedback</a>
+  <a href="faq.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">FAQ</a>
+  <a href="privacy.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Privacy & Policy</a>
+  <a href="support.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Support</a>
+  <a href="terms.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Terms & Conditions</a>
+  <a href="trust.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Trust</a>
+</nav>

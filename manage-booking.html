@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Manage My Booking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('manage-booking-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Booking Section */
+    .booking-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .booking-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .booking-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .booking-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .booking-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Booking Details */
+    .booking-details {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #000000;
+      border-radius: 5px;
+      display: none;
+    }
+    .booking-details h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>MANAGE MY BOOKING</h1>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="booking-container">
+    <h2>FIND YOUR BOOKING</h2>
+    <form id="bookingForm">
+      <label for="bookingId">BOOKING ID</label>
+      <input type="text" id="bookingId" placeholder="Enter your booking ID" required>
+
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <button type="button" onclick="findBooking()">SEARCH BOOKING</button>
+    </form>
+
+    <!-- Booking Details -->
+    <div id="bookingDetails" class="booking-details">
+      <h3>Booking Details</h3>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Property:</strong> Nyali Beachfront Villa</p>
+      <p><strong>Check-in:</strong> 12 May 2026</p>
+      <p><strong>Check-out:</strong> 15 May 2026</p>
+      <p><strong>Status:</strong> Confirmed</p>
+
+      <button onclick="updateBooking()">UPDATE BOOKING</button>
+      <button onclick="cancelBooking()">CANCEL BOOKING</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function findBooking() {
+      document.getElementById('bookingDetails').style.display = 'block';
+    }
+    function updateBooking() {
+      alert('Booking update request submitted. Our team will contact you shortly.');
+    }
+    function cancelBooking() {
+      alert('Booking cancellation request submitted. You will receive confirmation soon.');
+    }
+  </script>
+
+</body>
+</html>

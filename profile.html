@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch User Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('profile-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Profile Section */
+    .profile-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .profile-container h2 {
+      color: #D4AF37;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .profile-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .profile-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .profile-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Inquiry History */
+    .history {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #000000;
+      border-radius: 5px;
+    }
+    .history h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+    .history ul {
+      list-style: none;
+      padding: 0;
+    }
+    .history ul li {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #D4AF37;
+      padding-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>USER PROFILE</h1>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="profile-container">
+    <h2>MY DETAILS</h2>
+    <form id="profileForm">
+      <label for="name">FULL NAME</label>
+      <input type="text" id="name" value="John Doe">
+
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="email" id="email" value="john@example.com">
+
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" value="0790123456">
+
+      <button type="button" onclick="updateProfile()">UPDATE PROFILE</button>
+    </form>
+
+    <!-- Inquiry History -->
+    <div class="history">
+      <h3>Inquiry History</h3>
+      <ul>
+        <li><strong>#BKG123:</strong> Nyali Beachfront Villa (12–15 May 2026) – Confirmed</li>
+        <li><strong>#BKG124:</strong> Mtwapa Luxury Suite (20–23 May 2026) – Cancelled</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function updateProfile() {
+      alert('Your profile has been updated successfully.');
+    }
+  </script>
+
+</body>
+</html>

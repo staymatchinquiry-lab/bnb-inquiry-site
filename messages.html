@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Messages</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('messages-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Messages Section */
+    .messages-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .messages-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .chat-box {
+      height: 300px;
+      overflow-y: auto;
+      background-color: #000000;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .chat-message {
+      margin-bottom: 15px;
+    }
+    .chat-message strong {
+      color: #D4AF37;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 10px;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .chat-input button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>MESSAGES</h1>
+  </div>
+
+  <!-- Messages Section -->
+  <div class="messages-container">
+    <h2>CHAT WITH ADMIN</h2>
+    <div class="chat-box" id="chatBox">
+      <div class="chat-message"><strong>Admin:</strong> Hello John, we’ve received your inquiry for Nyali Beachfront Villa.</div>
+      <div class="chat-message"><strong>John:</strong> Great, I’d like to confirm my booking for 12–15 May.</div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="chatMessage" placeholder="Type your message...">
+      <button onclick="sendMessage()">SEND</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById('chatMessage').value;
+      if(message.trim() !== "") {
+        const chatBox = document.getElementById('chatBox');
+        const newMessage = document.createElement('div');
+        newMessage.className = 'chat-message';
+        newMessage.innerHTML = '<strong>You:</strong> ' + message;
+        chatBox.appendChild(newMessage);
+        document.getElementById('chatMessage').value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    }
+  </script>
+
+</body>
+</html>

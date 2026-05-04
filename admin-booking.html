@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Admin Booking Management</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('admin-booking-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Admin Table */
+    .admin-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .admin-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #D4AF37;
+      padding: 10px;
+      text-align: center;
+    }
+    table th {
+      background-color: #000000;
+      color: #D4AF37;
+    }
+    table td {
+      background-color: #1c1c1c;
+    }
+    button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 2px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>ADMIN BOOKING MANAGEMENT</h1>
+  </div>
+
+  <!-- Admin Booking Table -->
+  <div class="admin-container">
+    <h2>ALL INQUIRIES & BOOKINGS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>Guest Name</th>
+          <th>Property</th>
+          <th>Check-in</th>
+          <th>Check-out</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#BKG123</td>
+          <td>John Doe</td>
+          <td>Nyali Beachfront Villa</td>
+          <td>12 May 2026</td>
+          <td>15 May 2026</td>
+          <td>Pending</td>
+          <td>
+            <button onclick="confirmBooking('BKG123')">Confirm</button>
+            <button onclick="cancelBooking('BKG123')">Cancel</button>
+          </td>
+        </tr>
+        <tr>
+          <td>#BKG124</td>
+          <td>Mary Ann</td>
+          <td>Mtwapa Luxury Suite</td>
+          <td>20 May 2026</td>
+          <td>23 May 2026</td>
+          <td>Confirmed</td>
+          <td>
+            <button onclick="cancelBooking('BKG124')">Cancel</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function confirmBooking(id) {
+      alert('Booking ' + id + ' has been confirmed.');
+    }
+    function cancelBooking(id) {
+      alert('Booking ' + id + ' has been cancelled.');
+    }
+  </script>
+
+</body>
+</html>

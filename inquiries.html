@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Inquiries</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('inquiries-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Inquiry Form */
+    .inquiry-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .inquiry-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .inquiry-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .inquiry-container input, .inquiry-container textarea, .inquiry-container select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .inquiry-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Confirmation Box */
+    .confirmation {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #000000;
+      border-radius: 5px;
+      display: none;
+    }
+    .confirmation h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>SUBMIT AN INQUIRY</h1>
+  </div>
+
+  <!-- Inquiry Form -->
+  <div class="inquiry-container">
+    <h2>INQUIRY FORM</h2>
+    <form id="inquiryForm">
+      <label for="guestName">FULL NAME</label>
+      <input type="text" id="guestName" placeholder="Enter your name" required>
+
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <label for="property">PROPERTY</label>
+      <select id="property" required>
+        <option value="">Select property</option>
+        <option value="Nyali Beachfront Villa">Nyali Beachfront Villa</option>
+        <option value="Mtwapa Luxury Suite">Mtwapa Luxury Suite</option>
+        <option value="Changamwe Airport Stay">Changamwe Airport Stay</option>
+      </select>
+
+      <label for="dates">TRAVEL DATES</label>
+      <input type="text" id="dates" placeholder="e.g. 12 May 2026 - 15 May 2026" required>
+
+      <label for="message">MESSAGE</label>
+      <textarea id="message" rows="4" placeholder="Enter your inquiry details" required></textarea>
+
+      <button type="button" onclick="submitInquiry()">SUBMIT INQUIRY</button>
+    </form>
+
+    <!-- Confirmation -->
+    <div id="confirmationBox" class="confirmation">
+      <h3>Inquiry Submitted ✅</h3>
+      <p>Our team will review your request and contact you via WhatsApp/email within 24 hours.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function submitInquiry() {
+      document.getElementById('confirmationBox').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Contact - Deluxe Marcapolo Stays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 40vh;
+      background: url('contact-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+    .contact-info h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      text-align: center;
+      margin: 10px 0;
+      text-transform: uppercase;
+    }
+
+    /* Social Links */
+    .social-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-links a {
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+    .contact-form h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Confirmation Message */
+    #contactConfirmation {
+      display: none;
+      margin-top: 20px;
+      background-color: #000000;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>CONTACT US</h1>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h2>GET IN TOUCH</h2>
+    <p>📞 PHONE: 0790535068</p>
+    <p>📧 EMAIL: staymatchinquiry@gmail.com</p>
+    <p>🏠 ADDRESS: Deluxe Marcapolo Stays, Changamwe,Mombasa</p>
+    <p>💬 WHATSAPP: 0790535068</p>
+
+    <div class="social-links">
+      <p>FOLLOW US ON SOCIAL MEDIA:</p>
+      <a href="https://www.tiktok.com/@staymatchinquiry" target="_blank">TikTok</a> |
+      <a href="https://www.instagram.com/staymatchinquiry" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/staymatchinquiry" target="_blank">Facebook</a>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>SEND US A MESSAGE</h2>
+    <form id="contactForm">
+      <label for="name">FULL NAME</label>
+      <input type="text" id="name" required>
+
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" required>
+
+      <label for="message">YOUR MESSAGE</label>
+      <textarea id="message" rows="4" placeholder="Write your inquiry here..." required></textarea>
+
+      <button type="button" onclick="confirmContact()">SEND MESSAGE</button>
+    </form>
+
+    <div id="contactConfirmation">
+      THANK YOU FOR CONTACTING US! WE WILL RESPOND SHORTLY.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function confirmContact() {
+      document.getElementById('contactConfirmation').style.display = 'block';
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch FAQ - Deluxe Marcapolo Stays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('faq-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .faq-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #D4AF37;
+    }
+    .faq-question {
+      background-color: #000000;
+      color: #D4AF37;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .faq-answer {
+      display: none;
+      padding: 15px;
+      background-color: #1c1c1c;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>FREQUENTLY ASKED QUESTIONS</h1>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-container">
+    <h2>HOW CAN WE HELP YOU?</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Is StayMatch a property listing website?</div>
+      <div class="faq-answer">No, StayMatch is an inquiry-based platform. Guests send their travel details, and our team finds the best BnB options for them — we don’t list properties publicly.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I make an inquiry?</div>
+      <div class="faq-answer">Simply fill out the inquiry form on the homepage with your destination, dates, budget, and preferences. Our team will contact you with suitable options.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I pay directly through the website?</div>
+      <div class="faq-answer">Yes, payments can be made via M-Pesa to number 0790535068. Always include your transaction code for verification.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I know my booking is confirmed?</div>
+      <div class="faq-answer">Once your payment is verified, you’ll receive a confirmation message and booking details via WhatsApp or email.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I become a host or agent?</div>
+      <div class="faq-answer">Yes! During sign-up, select “Host” or “Agent” and provide your ID number. Our admin team will review and approve your account.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Where are your BnBs located?</div>
+      <div class="faq-answer">We operate in Changamwe, Mtwapa, Nyali, and other prime areas across Mombasa and Kenya. Each inquiry is matched to the best available stay.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I contact StayMatch support?</div>
+      <div class="faq-answer">You can reach us via WhatsApp (0790535068), email (duncanoteri@gmail.com), or through the Contact page on the website.</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
+<!-- Navigation Bar -->
+<nav style="background-color:#000000; padding:15px; text-align:center;">
+  <a href="login.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Login</a>
+  <a href="signup.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Sign Up</a>
+  <a href="verification.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Verification</a>
+  <a href="confirmation.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Confirmation</a>
+  <a href="dashboard.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Dashboard</a>
+  <a href="testimonials.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Testimonials</a>
+  <a href="feedback.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Feedback</a>
+  <a href="faq.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">FAQ</a>
+  <a href="privacy.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Privacy & Policy</a>
+  <a href="support.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Support</a>
+  <a href="terms.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Terms & Conditions</a>
+  <a href="trust.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Trust</a>
+</nav>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deluxe Marcapolo Stays - StayMatch</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 50vh;
+      background: url('home-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 3em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px 30px;
+      border-radius: 8px;
+    }
+
+    /* Inquiry Form */
+    .inquiry-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+    .inquiry-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .inquiry-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .inquiry-container input, .inquiry-container select, .inquiry-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .inquiry-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* M-Pesa Banner */
+    .mpesa-banner {
+      text-align: center;
+      margin: 40px auto;
+    }
+    .mpesa-banner img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Confirmation Message */
+    #inquiryConfirmation {
+      display: none;
+      margin-top: 20px;
+      background-color: #000000;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>WELCOME TO DELUXE MARCAPOLO STAYS</h1>
+  </div>
+
+  <!-- Inquiry Form -->
+  <div class="inquiry-container">
+    <h2>MAKE AN INQUIRY</h2>
+    <form id="inquiryForm">
+      <label for="destination">DESTINATION</label>
+      <select id="destination" required>
+        <option value="">-- SELECT DESTINATION --</option>
+        <option>BONDENI</option>
+        <option>CBD / CITY CENTRE</option>
+        <option>CHANGAMWE</option>
+        <option>DIANI / UKUNDA</option>
+        <option>DONHOLM</option>
+        <option>EMBAKASI</option>
+        <option>FEDHA</option>
+        <option>GARDEN CITY</option>
+        <option>JKIA AREA</option>
+        <option>KALUNDU</option>
+        <option>KAMAKIS</option>
+        <option>KAREN</option>
+        <option>KIAMBU ROAD</option>
+        <option>KILELESHWA</option>
+        <option>KILIFI</option>
+        <option>KILIMANI</option>
+        <option>KISUMU CBD</option>
+        <option>KITENGELA</option>
+        <option>KITISURU</option>
+        <option>KITUI TOWN CBD</option>
+        <option>KIZINGO</option>
+        <option>KU HOSPITAL</option>
+        <option>KWA VONZA</option>
+        <option>LANET</option>
+        <option>LANGATA</option>
+        <option>LAVINGTON</option>
+        <option>LIKONI</option>
+        <option>MAKASEMBO</option>
+        <option>MALINDI</option>
+        <option>MEMBLEY</option>
+        <option>MILIMANI KISUMU</option>
+        <option>MILIMANI NAKURU</option>
+        <option>MIREMA</option>
+        <option>MOMBASA CBD / TOWN</option>
+        <option>MTWAPA</option>
+        <option>NAKA ESTATE</option>
+        <option>NGARA</option>
+        <option>NYALI</option>
+        <option>OLD TOWN</option>
+        <option>PARKLANDS</option>
+        <option>ROYSAMBU</option>
+        <option>RUAKA</option>
+        <option>SECTION 58</option>
+        <option>SHANZU</option>
+        <option>SOUTH B / SOUTH C</option>
+        <option>SYOKIMAU</option>
+        <option>TATU CITY</option>
+        <option>THIKA ROAD</option>
+        <option>TOM MBOYA ESTATE KISUMU</option>
+        <option>TRM</option>
+        <option>TUDOR</option>
+        <option>WATAMU</option>
+        <option>WESTLANDS</option>
+        <option>ZIMMERMAN</option>
+      </select>
+
+ <label for="placeDescription">PLACE DESCRIPTION</label>
+      <textarea id="placeDescription" rows="3" placeholder="Describe exact location or landmark (e.g. near Nyali Mall, Airport Road, close to Sacco)"></textarea>
+
+      <label for="placeDescription">PLACE DESCRIPTION</label>
+      <textarea id="placeDescription" rows="3" placeholder="Describe exact location or landmark (e.g. near Nyali Mall, Airport Road, Seaview)"></textarea>
+
+      <label for="propertyType">PROPERTY TYPE</label>
+      <select id="propertyType" required>
+        <option value="">Select property type</option>
+        <option>Studio Apartment</option>
+        <option>1 Bedroom Apartment</option>
+        <option>2 Bedroom Apartment</option>
+        <option>3 Bedroom Apartment</option>
+        <option>4 Bedroom Apartment</option>
+        <option>Villa</option>
+        <option>Cottage</option>
+      </select>
+
+      <label for="checkin">CHECK-IN DATE</label>
+      <input type="date" id="checkin" required>
+
+      <label for="checkout">CHECK-OUT DATE</label>
+      <input type="date" id="checkout" required>
+
+      <label for="guests">NUMBER OF GUESTS</label>
+      <input type="number" id="guests" placeholder="e.g. 2" required>
+
+      <label for="budget">BUDGET</label>
+      <input type="text" id="budget" placeholder="e.g. KES 10,000">
+
+      <label for="purpose">PURPOSE OF STAY</label>
+      <select id="purpose">
+        <option value="">Select purpose</option>
+        <option>Vacation</option>
+        <option>Work</option>
+        <option>Romantic</option>
+        <option>Family</option>
+      </select>
+
+      <label for="preferences">PREFERENCES</label>
+      <textarea id="preferences" rows="3" placeholder="e.g. Pool, WiFi, Security"></textarea>
+
+      <button type="button" onclick="submitInquiry()">SUBMIT INQUIRY</button>
+    </form>
+
+    <!-- Confirmation -->
+    <div id="confirmationBox" style="display:none; margin-top:20px; padding:15px; background:#000; border-radius:5px;">
+      <h3 style="color:#D4AF37;">Inquiry Submitted ✅</h3>
+      <p>Our team will review your request and contact you via WhatsApp/email within 24 hours.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function submitInquiry() {
+      document.getElementById('confirmationBox').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

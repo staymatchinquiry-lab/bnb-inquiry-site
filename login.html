@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Login - Deluxe Marcapolo Stays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 45vh;
+      background: url('login-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Login Form */
+    .login-container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .login-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .login-container label {
+      display: block;
+      margin: 10px 0 5px;
+      text-transform: uppercase;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .login-container .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+    .login-container a {
+      color: #D4AF37;
+      text-decoration: none;
+    }
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+    .login-container button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>WELCOME BACK TO STAYMATCH</h1>
+  </div>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <h2>LOGIN TO YOUR ACCOUNT</h2>
+    <form id="loginForm">
+      <label for="email">EMAIL ADDRESS</label>
+      <input type="email" id="email" placeholder="Enter your Email" required>
+
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" placeholder="Enter your Password" required>
+
+      <div class="options">
+        <label><input type="checkbox"> Remember Me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="button" onclick="loginSuccess()">LOGIN</button>
+    </form>
+
+    <p style="text-align:center; margin-top:15px;">Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+    <div id="loginConfirmation" style="display:none; text-align:center; color:#D4AF37; margin-top:15px;">
+      Login successful! Redirecting to your dashboard...
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+  <script>
+    function loginSuccess() {
+      document.getElementById('loginConfirmation').style.display = 'block';
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
+<!-- Navigation Bar -->
+<nav style="background-color:#000000; padding:15px; text-align:center;">
+  <a href="login.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Login</a>
+  <a href="signup.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Sign Up</a>
+  <a href="verification.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Verification</a>
+  <a href="confirmation.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Confirmation</a>
+  <a href="dashboard.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Dashboard</a>
+  <a href="testimonials.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Testimonials</a>
+  <a href="feedback.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Feedback</a>
+  <a href="faq.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">FAQ</a>
+  <a href="privacy.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Privacy & Policy</a>
+  <a href="support.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Support</a>
+  <a href="terms.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Terms & Conditions</a>
+  <a href="trust.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Trust</a>
+</nav>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayMatch Dashboard - Deluxe Marcapolo Stays</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111111;
+      color: #FFFFFF;
+    }
+
+    /* Cover Banner */
+    .cover-banner {
+      height: 40vh;
+      background: url('dashboard-cover.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-banner h1 {
+      color: #D4AF37;
+      font-size: 2.5em;
+      font-weight: bold;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+
+    /* Dashboard Layout */
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+    .dashboard-container h2 {
+      color: #D4AF37;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #000000;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #D4AF37;
+    }
+    .card h3 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .card button {
+      background-color: #D4AF37;
+      color: #111111;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #D4AF37;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Banner -->
+  <div class="cover-banner">
+    <h1>STAYMATCH DASHBOARD</h1>
+  </div>
+
+  <!-- Dashboard Content -->
+  <div class="dashboard-container">
+    <h2>ADMIN CONTROL PANEL</h2>
+    <div class="dashboard-grid">
+
+      <!-- Bookings -->
+      <div class="card">
+        <h3>BOOKINGS</h3>
+        <p>View and manage all client bookings. Confirm check-in and check-out dates, and verify payment status.</p>
+        <button>VIEW BOOKINGS</button>
+      </div>
+
+      <!-- Inquiries -->
+      <div class="card">
+        <h3>INQUIRIES</h3>
+        <p>Track all inquiries from the website. Review destination preferences and property types requested.</p>
+        <button>VIEW INQUIRIES</button>
+      </div>
+
+      <!-- Payments -->
+      <div class="card">
+        <h3>PAYMENT VERIFICATION</h3>
+        <p>Verify M-Pesa transactions using code confirmation. Ensure all payments match booking details.</p>
+        <button>VERIFY PAYMENTS</button>
+      </div>
+
+      <!-- Client Accounts -->
+      <div class="card">
+        <h3>CLIENT ACCOUNTS</h3>
+        <p>Manage registered clients, update profiles, and monitor booking history and communication.</p>
+        <button>MANAGE CLIENTS</button>
+      </div>
+
+      <!-- Social Media -->
+      <div class="card">
+        <h3>SOCIAL MEDIA</h3>
+        <p>Stay connected with clients via WhatsApp (0790535068), TikTok, Instagram, and Facebook @staymatchinquiry.</p>
+        <button>OPEN LINKS</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Deluxe Marcapolo Stays. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
+<!-- Navigation Bar -->
+<nav style="background-color:#000000; padding:15px; text-align:center;">
+  <a href="login.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Login</a>
+  <a href="signup.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Sign Up</a>
+  <a href="verification.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Verification</a>
+  <a href="confirmation.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Confirmation</a>
+  <a href="dashboard.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Dashboard</a>
+  <a href="testimonials.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Testimonials</a>
+  <a href="feedback.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Feedback</a>
+  <a href="faq.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">FAQ</a>
+  <a href="privacy.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Privacy & Policy</a>
+  <a href="support.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Support</a>
+  <a href="terms.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Terms & Conditions</a>
+  <a href="trust.html" style="color:#D4AF37; margin:0 15px; text-decoration:none; font-weight:bold;">Trust</a>
+</nav>
